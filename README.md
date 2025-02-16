@@ -25,7 +25,7 @@ full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정�
 ## Transformer 구조 설명
 **1. 입력차원변환**
 
-self.embedding = nn.Linear(input_dim, d_model)
+'self.embedding = nn.Linear(input_dim, d_model)'
 
 
 **2. Transformer Encoder Layer 생성**
@@ -48,6 +48,7 @@ return self.fc(x)
 
 
 **4. 데이터 읽기 및 전처리**
+
 
 **5. 학습 데이터 준비**
 
