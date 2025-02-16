@@ -30,21 +30,17 @@ full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정�
 
 **2. Transformer Encoder Layer 생성**
 
-self.encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=nhead)
-self.transformer = nn.TransformerEncoder(self.encoder_layer, num_layers=num_layers)
+`self.encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=nhead)`
+`self.transformer = nn.TransformerEncoder(self.encoder_layer, num_layers=num_layers)`
 
 
 **3. 순전파 과정**
 
-x = self.embedding(x)  # [batch_size, seq_length, d_model]
-
-x = x.permute(1, 0, 2)  # Transformer expects [seq_length, batch_size, d_model]
-
-x = self.transformer(x)  # [seq_length, batch_size, d_model]
-
-x = x[-1]  # 마지막 시점 출력 사용
-
-return self.fc(x)
+`x = self.embedding(x)  # [batch_size, seq_length, d_model]`
+`x = x.permute(1, 0, 2)  # Transformer expects [seq_length, batch_size, d_model]`
+`x = self.transformer(x)  # [seq_length, batch_size, d_model]`
+`x = x[-1]  # 마지막 시점 출력 사용`
+`return self.fc(x)`
 
 
 **4. 데이터 읽기 및 전처리**
