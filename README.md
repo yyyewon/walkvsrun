@@ -31,15 +31,20 @@ full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정�
 **2. Transformer Encoder Layer 생성**
 
 `self.encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=nhead)`
+
 `self.transformer = nn.TransformerEncoder(self.encoder_layer, num_layers=num_layers)`
 
 
 **3. 순전파 과정**
 
 `x = self.embedding(x)  # [batch_size, seq_length, d_model]`
+
 `x = x.permute(1, 0, 2)  # Transformer expects [seq_length, batch_size, d_model]`
+
 `x = self.transformer(x)  # [seq_length, batch_size, d_model]`
+
 `x = x[-1]  # 마지막 시점 출력 사용`
+
 `return self.fc(x)`
 
 
@@ -48,16 +53,16 @@ full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정�
 
 **5. 학습 데이터 준비**
 
-seq_length = 130  # 130개의 연속된 샘플을 하나의 입력으로 사용
+`seq_length = 130  # 130개의 연속된 샘플을 하나의 입력으로 사용`
 
-input_dim = len(features)
+`input_dim = len(features)`
 
-num_classes = data[target].nunique()
+`num_classes = data[target].nunique()`
 
 
-train_dataset = TimeSeriesDataset(train_data, features, target, seq_length)
+`train_dataset = TimeSeriesDataset(train_data, features, target, seq_length)`
 
-test_dataset = TimeSeriesDataset(test_data, features, target, seq_length)
+`test_dataset = TimeSeriesDataset(test_data, features, target, seq_length)`
 
 
 
