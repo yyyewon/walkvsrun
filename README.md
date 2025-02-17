@@ -94,7 +94,7 @@ AdamW 옵티마이저 사용, 배치마다 역전파 진행
 - ReLU 적용
 - fc3을 통해 최종 num_classes 개수의 출력을 생성
 
-**mlp 특징**
+***mlp 특징***
 Fully Connected Layer (완전연결층)
 시계열 데이터를 Flatten하여 단순한 벡터로 변환한 후 분류 진행
 
