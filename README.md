@@ -100,4 +100,4 @@ Fully Connected Layer (완전연결층), 시계열 데이터를 Flatten하여 �
 
 **3. 데이터셋 설정**
 
-seq_length = 50 # 시간적 패턴 일부 반영, 계산량 줄임
+`seq_length = 50 # 시간적 패턴 일부 반영, 계산량 줄임`
