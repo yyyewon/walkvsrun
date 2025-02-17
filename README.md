@@ -77,10 +77,15 @@ AdamW 옵티마이저 사용, 배치마다 역전파 진행
 # walk_mlp.ipynb
 ## mlp 구조 설명
 **1. __init__ 부분**
+
 `fc1 → 입력을 hidden_dim (128개 노드)으로 변환`
+
 `ReLU → 비선형 활성화 함수 적용 (비선형성을 추가하여 학습 능력 향상)`
+
 `fc2 → hidden_dim // 2 크기로 축소 (64개 노드)`
+
 `fc3 → num_classes (출력 클래스 수)로 변환`
+
 
 **2. forward 부분 (순전파)**
 - 입력 데이터를 fc1 레이어에 통과시켜 128개 뉴런으로 변환
@@ -89,7 +94,7 @@ AdamW 옵티마이저 사용, 배치마다 역전파 진행
 - ReLU 적용
 - fc3을 통해 최종 num_classes 개수의 출력을 생성
 
-** *mlp 특징**
+**mlp 특징**
 Fully Connected Layer (완전연결층)
 시계열 데이터를 Flatten하여 단순한 벡터로 변환한 후 분류 진행
 
