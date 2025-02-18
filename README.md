@@ -19,7 +19,8 @@
 
 ## walkvsrun_sorted.csv
 
-full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정리)
+full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정리)  
+
 
 
 # encoder_visualization.ipynb
