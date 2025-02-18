@@ -17,12 +17,12 @@
 - **가속도계 (Accelerometer)**: 물체의 가속도를 측정. 예를 들어, 손목을 빠르게 위로 올리거나 내릴 때 z축 가속도 값이 변함.
 - **자이로스코프 (Gyroscope)**: 물체의 각속도(회전 속도)를 측정. 예를 들어, 손목을 돌릴 때 x, y, z축 각속도 값이 달라짐.
 
-# walkvsrun_sorted.csv
+## walkvsrun_sorted.csv
 
 full_datetime 컬럼 추가: 시간 정렬 및 가공 (시간 순서대로 정리)
 
 # encoder_visualization.ipynb
-## Transformer 구조 설명
+### Transformer 구조 설명
 **1. 입력차원변환**
 
 `self.embedding = nn.Linear(input_dim, d_model)`
@@ -80,7 +80,7 @@ Epoch 1/10, Loss: 0.6986, Accuracy: 0.5002, F1 Score: 0.3335
 
 
 # walk_mlp.ipynb
-## mlp 구조 설명
+### mlp 구조 설명
 **1. __init__ 부분**
 
 `fc1 → 입력을 hidden_dim (128개 노드)으로 변환`
