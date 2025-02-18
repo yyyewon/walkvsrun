@@ -104,4 +104,14 @@ Fully Connected Layer (완전연결층), 시계열 데이터를 Flatten하여 �
 
 
 ###결과
+Epoch 1/10, Loss: 0.2710, Accuracy: 0.9469
+Epoch 2/10, Loss: 0.1093, Accuracy: 0.9626
+Epoch 3/10, Loss: 0.0784, Accuracy: 0.9661
+Epoch 4/10, Loss: 0.0583, Accuracy: 0.9647
+Epoch 5/10, Loss: 0.0446, Accuracy: 0.9664
+Epoch 6/10, Loss: 0.0333, Accuracy: 0.9639
+Epoch 7/10, Loss: 0.0272, Accuracy: 0.9643
+Epoch 8/10, Loss: 0.0231, Accuracy: 0.9641
+Epoch 9/10, Loss: 0.0196, Accuracy: 0.9667
+Epoch 10/10, Loss: 0.0170, Accuracy: 0.9641
 
