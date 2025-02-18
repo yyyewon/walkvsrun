@@ -79,8 +79,6 @@ AdamW 옵티마이저 사용, 배치마다 역전파 진행
 
 - seq_length=100,120,130,150 해봤을 때 130이 가장 성능 좋았음.
 
-- epoch=10,50 해봤을 때
-
 - 특징 선택: 상관관계가 높은 acceleration_x ↔ acceleration_z 중 하나 제거해도 결과는 비슷함.
 - dropout 추가: dropout=0.2 추가해도 결과 비슷함.
 
